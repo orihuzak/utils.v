@@ -28,8 +28,8 @@ pub fn choose_execute() ?string {
 	}
 }
 
-pub fn load_json<T>(path string) T {
-	data := os.read_file(path) or { panic(err) }
-	decoded := json.decode(T, data) or { panic(err) }
+pub fn load_json<T>(path string) ?T {
+	data := os.read_file(path) ?
+	decoded := json.decode(T, data) ?
 	return decoded
 }
