@@ -14,6 +14,24 @@ pub fn is_wsl() bool {
 	return false
 }
 
+pub fn which_os() ?string {
+	uname := os.uname()
+	match uname.sysname {
+		'Linux' {
+			if uname.release.contains('microsoft') {
+				return 'wsl'
+			}
+			return 'linux'
+		}
+		'Microsoft Windows' {
+			return 'windows'
+		}
+		else {
+			return error('unknown os.')
+		}
+	}
+}
+
 pub fn load_json<T>(path string) ?T {
 	data := os.read_file(path) ?
 	decoded := json.decode(T, data) ?
