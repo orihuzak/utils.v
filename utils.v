@@ -37,3 +37,8 @@ pub fn load_json<T>(path string) ?T {
 	decoded := json.decode(T, data) ?
 	return decoded
 }
+
+pub fn deference<T>(a []T, b []T) []T {
+	return a.filter(!b.contains(it))
+}
+
