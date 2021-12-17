@@ -27,7 +27,7 @@ pub fn osname() ?string {
 			return 'windows'
 		}
 		else {
-			return error('unknown os.')
+			return error('could not identified your os.')
 		}
 	}
 }
