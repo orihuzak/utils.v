@@ -4,9 +4,9 @@ fn test_is_wsl() {
 	assert is_wsl() == true
 }
 
-fn test_which_os() {
-	osname := which_os() or { panic(err.msg) }
-	assert osname in ['wsl', 'windows', 'linux']
+fn test_osname() {
+	os_name := osname() or { panic(err.msg) }
+	assert os_name in ['wsl', 'windows', 'linux']
 }
 
 fn test_deference() {

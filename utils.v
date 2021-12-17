@@ -14,7 +14,7 @@ pub fn is_wsl() bool {
 	return false
 }
 
-pub fn which_os() ?string {
+pub fn osname() ?string {
 	uname := os.uname()
 	match uname.sysname {
 		'Linux' {
