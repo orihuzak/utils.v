@@ -1,7 +1,7 @@
 Module {
-	name: 'vosname'
-	description: 'A module to get os name'
-	version: '0.0.1'
-	license: ''
+	name: 'vos'
+	description: 'OS library with WSL support'
+	version: '0.0.0'
+	license: 'MIT'
 	dependencies: []
 }
