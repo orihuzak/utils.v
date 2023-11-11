@@ -1,13 +1,13 @@
 module vos
 
-import os
-
-fn test_is_wsl() {
+fn test_wsl() {
 	assert is_wsl() == true
+	assert user_os() == 'wsl'
 }
 
-fn test_user_os() {
-	assert user_os() == 'wsl'
+fn test_chromeos() {
+	assert is_chromeos() == true
+	assert user_os() == 'chromeos'
 }
 
 fn test_open_url() {
