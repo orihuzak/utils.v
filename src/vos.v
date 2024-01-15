@@ -4,19 +4,14 @@ import os
 
 pub fn is_wsl() bool {
 	$if linux {
-		if os.uname().release.contains('microsoft') {
-			return true
-		}
+		return os.uname().release.contains('microsoft')
 	}
 	return false
 }
 
 pub fn is_chromeos() bool {
 	uname := os.uname()
-	if uname.sysname == 'Linux' && uname.nodename == 'penguin' {
-		return true
-	}
-	return false
+	return uname.sysname == 'Linux' && uname.nodename == 'penguin'
 }
 
 // user_os returns the user's operating system name, including wsl.
