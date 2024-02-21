@@ -27,6 +27,11 @@ pub fn xdg_config_dirs() []string {
 	return dirs.split(':')
 }
 
+@[deprecated: 'use user_bin_dir() instead']
 pub fn user_exe_dir() string {
+	return os.join_path(os.home_dir(), '.local', 'bin')
+}
+
+pub fn user_bin_dir() string {
 	return os.join_path(os.home_dir(), '.local', 'bin')
 }

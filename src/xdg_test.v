@@ -10,4 +10,5 @@ fn test_xdg_dirs() {
 	assert xdg_data_dirs() == ['/usr/local/share', '/usr/share']
 	assert xdg_config_dirs() == ['/etc/xdg']
 	assert user_exe_dir() == os.join_path(os.home_dir(), '.local', 'bin')
+	assert user_bin_dir() == os.join_path(os.home_dir(), '.local', 'bin')
 }
