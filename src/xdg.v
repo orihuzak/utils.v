@@ -3,9 +3,6 @@ module vos
 // XDG Base Directory Specification
 import os
 
-// XDG_CONFIG_HOME use os.config_dir
-// XDG_CACHE_HOME use os.cache_dir
-
 pub fn xdg_data_home() string {
 	// TODO: fix it when v bug is fixed
 	dir := os.getenv_opt('XDG_DATA_HOME') or { os.join_path(os.home_dir(), '.local', 'share') }
