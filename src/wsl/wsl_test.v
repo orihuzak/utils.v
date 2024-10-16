@@ -5,6 +5,5 @@ fn test_getwinenv() {
 }
 
 fn test_to_wsl() {
-	winpath := getwinenv('SYSTEMROOT')!
-	assert to_wslpath(winpath)! == '/mnt/c/WINDOWS'
+	assert to_wslpath('C:\\WINDOWS')! == '/mnt/c/WINDOWS'
 }
