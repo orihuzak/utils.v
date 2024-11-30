@@ -10,8 +10,7 @@ pub fn is_wsl() bool {
 }
 
 pub fn is_chromeos() bool {
-	uname := os.uname()
-	return uname.sysname == 'Linux' && uname.nodename == 'penguin'
+	return os.user_os() == 'linux' && os.uname().nodename == 'penguin'
 }
 
 // user_os returns the user's operating system name, including wsl.
