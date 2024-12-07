@@ -10,7 +10,10 @@ pub fn is_wsl() bool {
 }
 
 pub fn is_chromeos() bool {
-	return os.user_os() == 'linux' && os.uname().nodename == 'penguin'
+	$if linux {
+		return os.uname().nodename == 'penguin'
+	}
+	return false
 }
 
 // user_os returns the user's operating system name, including wsl.
