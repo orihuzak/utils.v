@@ -1,4 +1,4 @@
-module vos
+module osv
 
 fn test_wsl() {
 	assert is_wsl() == true
@@ -16,6 +16,6 @@ fn test_open_url() {
 }
 
 fn test_open_file() {
-	file := './src/vos.v'
+	file := './src/osv.v'
 	open_uri(file) or { assert false }
 }

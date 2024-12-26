@@ -1,4 +1,4 @@
-module vos
+module osv
 
 import os
 

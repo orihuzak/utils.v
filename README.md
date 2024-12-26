@@ -1,4 +1,4 @@
-# vos
+# osv
 OS library with WSL support
 
 - XDG_CONFIG_HOME use `os.config_dir()!`
